@@ -208,6 +208,26 @@ footer{
     padding: 10px 0;
 }
 
+.footer-links ul li a{
+    display: block !important;
+}
+
+.footer-bottom-right div ul li a{
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+}
+
+.footer-bottom-right div ul li a p,
+.footer-bottom-right div ul li a svg{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.footer-bottom-right div ul li a svg{
+    margin-right: 10px;
+}
+
 .footer-bottom-right div ul li:hover{
     opacity: .5;
     transition: var(--smooth);
@@ -245,3 +265,16 @@ footer{
     margin-top: 90px;
     text-align: center;
 }
+
+/* @media screen and (max-width: 1056px){
+    .footer-content{
+        display: grid;
+        grid-template-columns: 3fr 6fr;
+    }
+    .footer-bottom-right div:not(:last-child){
+        margin-right: 0px;
+    }
+    .footer-bottom-right div{
+        width: 50px;
+    }
+} */
