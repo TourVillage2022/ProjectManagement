@@ -198,7 +198,8 @@ body{
 }
 
 .about-perzim{
-    background-color: var(--blue-color);
+    /* background-color: var(--blue-color); */
+    background: radial-gradient(ellipse at top, rgb(17, 83, 155), transparent), radial-gradient(ellipse at bottom, var(--blue-color), transparent);
     padding: 40px;
 }
 
