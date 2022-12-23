@@ -10,8 +10,10 @@
     --dark-blue: rgba(4, 12, 24, 1);
     /* --pink-yellow-gradient: linear-gradient(to right, rgba(174, 103, 250, 1), rgba(244, 152, 103, 1)); */
     --pink-yellow-gradient: linear-gradient(to right, rgba(174, 103, 250, 1), rgb(255, 143, 82));
+    --yellow-pink-gradient: linear-gradient(to left, rgba(174, 103, 250, 1), rgb(255, 143, 82));
     --footer-blue: rgba(3, 27, 52, 1);
     --smooth: ease-in .3s;
+    --content-blue: rgba(129, 175, 221, 1);
 }
 
 a{
@@ -114,11 +116,14 @@ body{
 /* content */
 
 .section-center{
-    height: 580px;
     display: flex;
     align-items: center;
     justify-content: center;
     /* background-color: black; */
+}
+
+.hero{
+    height: 580px;
 }
 
 .content-wrapper{
@@ -139,6 +144,7 @@ body{
 
 .content-wrapper p span, .content-wrapper h1 span{
     display: block;
+    /* position: relative; */
 }
 
 .hero-section{
@@ -148,6 +154,99 @@ body{
     /* background-image: radial-gradient(at left 50%,rgba(4, 12, 24, .9),rgba(4, 12, 24, 0)), url('assets/intro-wallpaper.png'); */
     background-image: linear-gradient(to right, rgba(4, 43, 85, .9), rgba(4, 43, 85, .3)), url('assets/intro-wallpaper.png'); 
     background-size: cover;
+}
+
+.collaborator-section{
+    /* height: 1130px; */
+    margin: 50px 0;
+}
+
+.hero-primary-title{
+    position: relative;
+}
+
+.underline-text:after{
+    content: "";
+    position: absolute;
+    background: var(--pink-yellow-gradient);
+    height: 6px;
+    width: 70%;
+    left: 0;
+    bottom: -10px;
+}
+
+.perzim-intro{
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    height: inherit;
+    margin: 50px 0;
+}
+
+.perzim-intro-content{
+    margin-left: 50px;
+}
+
+.medium-white-title{
+    font-size: 36px;
+    font-weight: bold;
+    padding: 40px 0;
+}
+
+.medium-blue-text{
+    color: var(--content-blue);
+    font-size: 16px;
+}
+
+.about-perzim{
+    background-color: var(--blue-color);
+    padding: 40px;
+}
+
+.about-content ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.about-content ul li{
+    padding: 30px 20px;
+}
+
+.about-content ul li span{
+    position: relative;
+}
+
+.about-content ul li p{
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.small-white-text:before{
+    content: "";
+    position: absolute;
+    background: var(--pink-yellow-gradient);
+    height: 4px;
+    width: 30%;
+    left: 0;
+    bottom: 30px;
+}
+
+.gradient-btn{
+    background: var(--pink-yellow-gradient);
+    padding: 16px 28px;
+    border-radius: 20px;
+    margin-left: 40px;
+    transition: var(--smooth);
+}
+
+.gradient-btn:hover{
+    background: var(--yellow-pink-gradient);
+}
+
+.visit-perzim-section{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* footer */
@@ -200,6 +299,7 @@ footer{
 }
 
 .footer-bottom-right{
+    width: 60%;
     display: flex;
     justify-content: space-between;
 }
@@ -257,7 +357,7 @@ footer{
     position: absolute;
     bottom: -10px;
     left: 0;
-    width: 30%;
+    width: 20%;
     height: 6px;
 }
 
@@ -266,15 +366,18 @@ footer{
     text-align: center;
 }
 
-/* @media screen and (max-width: 1056px){
+@media screen and (max-width: 1056px){
     .footer-content{
         display: grid;
-        grid-template-columns: 3fr 6fr;
+        grid-template-columns: 1fr 3fr;
     }
     .footer-bottom-right div:not(:last-child){
+        margin-right: 10px;
+    }
+    /* .footer-bottom-right div:not(:last-child){
         margin-right: 0px;
-    }
+    } */
     .footer-bottom-right div{
-        width: 50px;
+        width: 220px;
     }
-} */
+}
